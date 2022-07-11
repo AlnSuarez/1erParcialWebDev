@@ -1,6 +1,4 @@
-      
-
-      /*
+/*
         Desarrolla la lógica para convertir los valores del textArea en minusculas: 
 
         Tip: Divide el problema en partes pequeñas. 
@@ -12,9 +10,19 @@
 
         Realiza todo lo anterior al hacer click en el botón. 
         */
+let minusculas = document
+    .getElementById("btn_mayusculas")
+    .addEventListener("click", (e) => {
+        e.preventDefault();
+        let cuadroDeTexto = document.getElementById("txt_may").value.split(",");
+        let arrayTemp = [];
+        cuadroDeTexto.map((element) => {
+            arrayTemp.push(element.toLowerCase());
+        });
+        document.getElementById("txt_may").innerText = arrayTemp.join(",");
+    });
 
-
-      /*
+/*
         Crea una funcion llamada "calculateDogAge" que: 
     
     - reciba como argumento un número representando la edad en años humanos.
@@ -26,9 +34,16 @@
     
     */
 
+let perro = document
+    .getElementById("btn_añoshumano")
+    .addEventListener("click", (e) => {
+        e.preventDefault();
+        let edad = document.getElementById("edad_humano").value;
+        let edadPerro = edad * 7;
+        document.getElementById("edad_perro").value = edadPerro;
+    });
 
-
-      /*  OBJETOS 
+/*  OBJETOS 
     
     A) Crea un constructor de tipo "Pokemon" que reciba 4 parametros
     
@@ -45,3 +60,28 @@
        Registra un evento de "click", para que cuando se de click en el botón, se muestren las propiedades de cada objeto en el input correspondiente. 
 
      */
+
+function pokemon(nombre, especie, ataque, defensa) {
+    this.nombre = nombre;
+    this.especie = especie;
+    this.ataque = ataque;
+    this.defensa = defensa;
+}
+
+let pikachu = new pokemon("Pikachu", "Eléctrico", 80, 50);
+let psyduck = new pokemon("Psyduck", "Psíquico", 30, 60);
+
+
+let pokemones = document.getElementById("btn_muestra").addEventListener("click",(e)=>{
+  e.preventDefault();
+  document.getElementById("nombre_poke1").value = pikachu.nombre;
+  document.getElementById("especie_poke1").value = pikachu.especie;
+  document.getElementById("ataque_poke1").value = pikachu.ataque;
+  document.getElementById("defensa_poke1").value = pikachu.defensa;
+
+  
+  document.getElementById("nombre_poke2").value = psyduck.nombre;
+  document.getElementById("especie_poke2").value = psyduck.especie;
+  document.getElementById("ataque_poke2").value = psyduck.ataque;
+  document.getElementById("defensa_poke2").value = psyduck.defensa;
+});
