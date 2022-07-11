@@ -1,0 +1,42 @@
+ img{
+    width: 50%;
+    margin-left: 25%;
+    border: double;
+    border-width: 5px;
+ }
+
+ header{
+    text-align: center;
+ }
+
+ h3{
+    text-align: center;
+ }
+
+ blockquote{
+    text-align: center;
+    font-size: 15px;
+ }
+
+ span{
+    font-weight: bold;
+ }
+
+ body{
+    background-color: rgb(250, 250, 145);
+ }
+
+ footer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+ }
+
+ .invertido{
+    display: flex;
+    flex-direction: column-reverse;
+ }
+
+ a{
+    margin-left: 5px;
+ }
